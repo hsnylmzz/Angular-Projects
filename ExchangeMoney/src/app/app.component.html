@@ -1,0 +1,53 @@
+<div class="mainArea">
+  <div class="container" id="currencyForm">
+    <h1>Doları Diğer Para Birimine Dönüştür</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <h5>Dolardaki Tutarı Girin</h5>
+          <input class="form-control"  (input)="onMoneyChange($event.target.value)">
+          <label>$</label>
+        </div>
+      </div>
+    </div>
+    <h3>Doların Para Birimi Karşılığı</h3>
+    <div class="row">
+      <div class="col-md-6">
+        <label><b>₺</b></label>
+        <div>
+          {{money | convert : 'TL'}} TL
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label><b>€</b></label>
+        <div>
+          {{money | convert : 'EUR'}} Euro
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label><b>₽</b></label>
+        <div>
+          {{money | convert : 'RUB'}} Ruble
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label><b>£</b></label>
+        <div>
+          {{money | convert : 'GBP'}} Pound
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label><b>¥</b></label>
+        <div>
+          {{money | convert : 'YEN'}} Yen
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label><b>A$</b></label>
+        <div>
+          {{money | convert : 'AUD'}} Aud
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
