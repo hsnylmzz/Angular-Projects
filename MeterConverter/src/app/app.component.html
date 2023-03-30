@@ -1,0 +1,47 @@
+<div class="mainArea">
+  <div class="container" id="meterForm">
+    <h1>Metreyi Diğer Birime Dönüştür</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <h5>Değer Girin</h5>
+          <input class="form-control"  (input)="onMeterChange($event.target.value)">
+          <label>m</label>
+        </div>
+      </div>
+    </div>
+    <h3>Metrenin Mil,km,cm,mm,Feet Karşılığı</h3>
+    <div class="row">
+      <div class="col-md-6">
+        <label><b>Kilometre </b></label>
+        <div>
+          {{meter | convert : 'km'}} km
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label><b>Santimetre </b></label>
+        <div>
+          {{meter | convert : 'cm'}} cm
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label><b>Milimetre </b></label>
+        <div>
+          {{meter | convert : 'mm'}} mm
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label><b>Mil </b></label>
+        <div>
+          {{meter | convert : 'mil'}} mil
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label><b>Feet </b></label>
+        <div>
+          {{meter | convert : 'ft'}} feet
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
