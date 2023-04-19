@@ -1,0 +1,21 @@
+<div class="container">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <app-input label="Ad Soyad" [control]="registerForm.get('name')"></app-input>
+    <app-input label="Adres" [control]="registerForm.get('street')"></app-input>
+    <div class="columns">
+      <div class="column">
+        <app-input label="Şehir" [control]="registerForm.get('city')"></app-input>
+      </div>
+      <div class="column">
+        <app-input label="Adres Kodu" [control]="registerForm.get('zip')"></app-input>
+      </div>
+    </div>
+    <div class="buttons" style="display: flex; justify-content: flex-end;">
+      <button class="button is-warning" type="button" (click)="ResetForm()">Temizle</button>
+      <button class="button is-primary" [disabled]="registerForm.invalid" type="submit">Kaydet</button>
+    </div>
+  </form>
+</div>
+<!-- <div>Form İçeriği : {{registerForm.value | json}}</div>
+<div>Form Valid mi : {{registerForm.valid ? "evet" : "hayır"}}</div>
+<div>Form Hataları : {{registerForm.get('name')?.errors | json}}</div> -->
